@@ -1,8 +1,10 @@
 import { Search } from "lucide-react";
 import DepartmentPageContent from "@/components/DepartmentPageContent";
-import ambienteEsportivoCover from "@/assets/projetos/pesquisa-ambiente-esportivo.jpg";
-import janeiroBrancoPesquisaCover from "@/assets/projetos/pesquisa-janeiro-branco.jpg";
-import semanaisCover from "@/assets/projetos/pesquisa-semanais.jpg";
+import {
+  ambienteEsportivoCover,
+  janeiroBrancoPesquisaCover,
+  semanaisCover,
+} from "@/assets/projetos";
 
 const services = [
   { name: "Pesquisa de Mercado Esportivo", slug: "pesquisa-mercado" },

@@ -5,8 +5,8 @@ import {
   carnavalCover, carnavalGallery,
   novembroNegroCover, novembroNegroGallery,
   esproQueEuVejoCover, esproQueEuVejoGallery,
+  identidadeInstagramCover,
 } from "@/assets/projetos";
-import identidadeInstagramCover from "@/assets/projetos/marketing-identidade-instagram.jpg";
 
 const services = [
   { name: "Gestão de Redes Sociais Esportivas", slug: "gestao-redes-sociais" },

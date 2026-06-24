@@ -4,7 +4,7 @@ import { Play, Pause, SkipBack, SkipForward, Heart, ExternalLink } from "lucide-
 import { createPlayer } from "@videojs/react";
 import { VideoSkin, Video, videoFeatures } from "@videojs/react/video";
 import "@videojs/react/video/skin.css";
-import podjogarCover from "@/assets/podjogar-cover.jpg";
+import { podjogarCover } from "@/assets/projetos";
 
 const VIDEO_SRC = "/media/podjogar.mp4";
 const VIDEO_POSTER = "/media/podjogar-poster.jpg";

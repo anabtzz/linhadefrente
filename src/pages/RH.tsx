@@ -1,8 +1,10 @@
 import { Users } from "lucide-react";
 import DepartmentPageContent from "@/components/DepartmentPageContent";
-import uniformesPlanilhasCover from "@/assets/projetos/rh-uniformes-planilhas.jpg";
-import diarioBordoCover from "@/assets/projetos/rh-diario-bordo.jpg";
-import planoCarreiraCover from "@/assets/projetos/rh-plano-carreira.jpg";
+import {
+  uniformesPlanilhasCover,
+  diarioBordoCover,
+  planoCarreiraCover,
+} from "@/assets/projetos";
 
 const services = [
   { name: "Recrutamento de Executivos Esportivos", slug: "recrutamento" },

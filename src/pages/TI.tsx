@@ -1,8 +1,10 @@
 import { Monitor } from "lucide-react";
 import DepartmentPageContent from "@/components/DepartmentPageContent";
-import ambienteArmazenamentoCover from "@/assets/projetos/ti-ambiente-armazenamento.png";
-import criacaoSiteCover from "@/assets/projetos/ti-criacao-site.png";
-import aprimoramentoSiteCover from "@/assets/projetos/ti-aprimoramento-site.jpg";
+import {
+  ambienteArmazenamentoCover,
+  criacaoSiteCover,
+  aprimoramentoSiteCover,
+} from "@/assets/projetos";
 
 const services = [
   { name: "Plataformas de Streaming Esportivo", slug: "streaming" },

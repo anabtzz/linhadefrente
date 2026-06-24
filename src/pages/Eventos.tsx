@@ -3,8 +3,8 @@ import DepartmentPageContent from "@/components/DepartmentPageContent";
 import {
   janeiroBrancoCover, janeiroBrancoGallery,
   carnavalCover, carnavalGallery,
+  criacaoDepartamentoCover,
 } from "@/assets/projetos";
-import criacaoDepartamentoCover from "@/assets/projetos/criacao-departamento.jpg";
 
 const services = [
   { name: "Organização de Campeonatos", slug: "campeonatos" },
