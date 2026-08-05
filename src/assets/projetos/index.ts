@@ -23,4 +23,4 @@ export const aprimoramentoSiteCover = placeholder;
 export const ambienteEsportivoCover = placeholder;
 export const janeiroBrancoPesquisaCover = placeholder;
 export const semanaisCover = placeholder;
-export const podjogarCover = placeholder;
+ 

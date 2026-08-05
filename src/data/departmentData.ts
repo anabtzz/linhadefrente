@@ -15,7 +15,6 @@ export const departmentOrder = [
   "/ti",
   "/eventos",
   "/rh",
-  "/podcast",
   "/pesquisa",
 ];
 
@@ -105,30 +104,9 @@ export const departments: Record<string, DepartmentInfo> = {
       { title: "Sem Título" },
       { title: "Sem Título" },
     ],
-    nextDepartment: "/podcast",
-  },
-  podcast: {
-    title: "Podcast",
-    path: "/podcast",
-    slug: "podcast",
-    icon: Mic,
-    services: [
-      { name: "Produção de Podcast Próprio", slug: "podcast-proprio" },
-      { name: "Podcasts Corporativos para Marcas", slug: "podcasts-corporativos" },
-      { name: "Entrevistas Exclusivas", slug: "entrevistas" },
-      { name: "Cobertura de Eventos ao Vivo", slug: "cobertura-eventos" },
-      { name: "Documentários em Áudio", slug: "documentarios" },
-      { name: "Distribuição Multiplataforma", slug: "distribuicao" },
-      { name: "Monetização e Patrocínios", slug: "monetizacao" },
-      { name: "Estratégia de Conteúdo", slug: "estrategia-conteudo" },
-    ],
-    projects: [
-      { title: "PODJOGAR" },
-      { title: "Sem Título" },
-      { title: "Sem Título" },
-    ],
     nextDepartment: "/pesquisa",
   },
+  
   pesquisa: {
     title: "Pesquisa",
     path: "/pesquisa",

@@ -13,8 +13,6 @@ import Eventos from "./pages/Eventos";
 import EventosService from "./pages/EventosService";
 import RH from "./pages/RH";
 import RHService from "./pages/RHService";
-import Podcast from "./pages/Podcast";
-import PodcastService from "./pages/PodcastService";
 import Pesquisa from "./pages/Pesquisa";
 import PesquisaService from "./pages/PesquisaService";
 import NotFound from "./pages/NotFound";
@@ -38,8 +36,7 @@ const App = () => (
             <Route path="/eventos/servicos/:serviceSlug" element={<EventosService />} />
             <Route path="/rh" element={<RH />} />
             <Route path="/rh/servicos/:serviceSlug" element={<RHService />} />
-            <Route path="/podcast" element={<Podcast />} />
-            <Route path="/podcast/servicos/:serviceSlug" element={<PodcastService />} />
+            
             <Route path="/pesquisa" element={<Pesquisa />} />
             <Route path="/pesquisa/servicos/:serviceSlug" element={<PesquisaService />} />
           </Route>

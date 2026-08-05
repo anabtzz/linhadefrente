@@ -16,7 +16,6 @@ const navLinks = [
   { path: "/ti", label: "T.I", slug: "ti" },
   { path: "/eventos", label: "Eventos", slug: "eventos" },
   { path: "/rh", label: "RH", slug: "rh" },
-  { path: "/podcast", label: "Podcast", slug: "podcast" },
   { path: "/pesquisa", label: "Pesquisa", slug: "pesquisa" },
 ];
 

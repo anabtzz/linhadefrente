@@ -24,8 +24,7 @@ export const DeptIcon3D = ({ type, color }: { type: string; color: string }) => 
         return <dodecahedronGeometry args={[0.8, 0]} />;
       case "Recursos Humanos":
         return <sphereGeometry args={[0.8, 8, 6]} />;
-      case "Podcast":
-        return <cylinderGeometry args={[0.4, 0.6, 1.2, 8]} />;
+      
       case "Pesquisa":
         return <torusGeometry args={[0.6, 0.25, 8, 16]} />;
       default:

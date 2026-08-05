@@ -65,14 +65,6 @@ const departments = [
     gradient: "bg-accent",
   },
   {
-    title: "Podcast",
-    description:
-      "Produzimos conteúdo de áudio e fazemos gincanas sobre todos os tipos de esportes, falando sobre experiências profissionais e também sobre como o esporte influencia no mundo e nossas vidas.",
-    icon: Mic,
-    path: "/podcast",
-    gradient: "bg-primary",
-  },
-  {
     title: "Pesquisa",
     description:
       "Dados que direcionam decisões. Análises profundas do mercado esportivo e comportamento do consumidor.",
@@ -494,7 +486,7 @@ const Index = () => {
               {
                 date: "Novembro 2025",
                 title: "Criação dos Departamentos",
-                description: "Estruturação dos departamentos de Marketing, T.I, Eventos, Podcast, Pesquisa e RH.",
+                description: "Estruturação dos departamentos de Marketing, T.I, Eventos, Pesquisa e RH.",
               },
               {
                 date: "Janeiro 2026",
@@ -503,14 +495,14 @@ const Index = () => {
               },
               {
                 date: "Abril 2026",
-                title: "Atualmente",
-                description: "Crescendo e consolidando nossa presença no mercado esportivo.",
+                title: "Primeira apresetação do site para o publico",
+                description: "Momento desicivo, sobre a empresa, mostrando o progeresso e a gestão",
               },
               {
-                date: "Futuro",
-                title: "Futuramente",
+                date: "Agosto 2026",
+                title: "Atualamente",
                 description:
-                  "Expandir nossa atuação, firmar parcerias estratégicas e se tornar referência nacional no esporte.",
+                  "Continuar o progresso e ser o principal meio de comunicação do esporte.",
               },
             ]}
             accentColor="bg-primary"
