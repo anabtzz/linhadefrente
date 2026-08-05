@@ -67,7 +67,6 @@ const Pesquisa = () => {
         { name: "Guttierez", role: "Notícias Basquete", roleDescription: "Acompanha o universo do basquete e traz as principais novidades da modalidade." },
         { name: "Giovana", role: "Notícias Vôlei", roleDescription: "Cobre o vôlei com matérias, resultados e bastidores do esporte." },
         { name: "Jully", role: "Notícias Vôlei", roleDescription: "Produz reportagens sobre o vôlei nacional e internacional." },
-        { name: "Nicole", role: "Notícias Vôlei", roleDescription: "Acompanha campeonatos de vôlei e divulga histórias dos atletas." },
         { name: "Kauan Henrique", role: "Repórter", roleDescription: "Apura, escreve e contribui com matérias para o departamento de pesquisa." },
       ]}
       timeline={[

@@ -64,7 +64,6 @@ const RH = () => {
         { name: "Thaís", role: "Cronograma Diário", roleDescription: "Organiza e acompanha o cronograma diário das atividades da equipe." },
         { name: "Giovanna G.", role: "Controle de Uniforme", roleDescription: "Gerencia a entrega, conservação e controle dos uniformes do time." },
         { name: "Isaac", role: "Ajudante", roleDescription: "Auxilia o RH em tarefas operacionais e no suporte aos colaboradores." },
-        { name: "Paulo", role: "Ajudante", roleDescription: "Apoia o departamento em demandas do dia a dia e ações internas." },
       ]}
       timeline={[
         {

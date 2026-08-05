@@ -55,12 +55,9 @@ const TI = () => {
       ]}
       team={[
         { name: "Erick", role: "Gestor", roleDescription: "Lidera o departamento de TI, definindo prioridades técnicas e direção dos projetos." },
-        { name: "Guilherme", role: "Coordenador", roleDescription: "Coordena a equipe de tecnologia e organiza as entregas do time." },
         { name: "Felipe", role: "FrontEnd", roleDescription: "Desenvolve as interfaces do site, focando em experiência e usabilidade." },
-        { name: "Kaio", role: "Testes", roleDescription: "Garante a qualidade do produto através de testes e validações." },
         { name: "Ana Beatriz", role: "Design", roleDescription: "Cria layouts e protótipos visuais das telas e funcionalidades do site." },
         { name: "Maycon", role: "Redator", roleDescription: "Produz textos e conteúdos para o site e materiais do departamento." },
-        { name: "Laryssa Duarte", role: "Suporte", roleDescription: "Apoia o time em demandas variadas, contribuindo com a operação da TI." },
       ]}
       timeline={[
         {
