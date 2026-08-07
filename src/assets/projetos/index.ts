@@ -3,8 +3,8 @@ const media = "/media";
 
 export const janeiroBrancoCover = `${media}/JANEIRO BRANCO 2026/PHOTO-2026-04-28-14-03-15.jpg`;
 export const janeiroBrancoGallery = [
-  `${media}/JANEIRO BRANCO 2026/PHOTO-2026-04-28-14-03-15.jpg`,
-  `${media}/JANEIRO BRANCO 2026/PHOTO-2026-04-28-14-44-16.jpg`,
+  `${media}/JANEIRO BRANCO 2026/IMG_2552.PNG`,
+  `${media}/JANEIRO BRANCO 2026/PHOTO-2026-04-28-14-03-13.jpg`,
   `${media}/JANEIRO BRANCO 2026/PHOTO-2026-04-28-14-03-14(3).jpg`,
   `${media}/JANEIRO BRANCO 2026/PHOTO-2026-04-28-14-19-21.jpg`,
   `${media}/JANEIRO BRANCO 2026/PHOTO-2026-04-28-14-44-17.jpg`,
