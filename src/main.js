@@ -28,6 +28,233 @@ const accessibilityState = {
   reducedMotion: localStorage.getItem("lf-reduced-motion") === "on"
 };
 
+const translations = {
+  pt: {
+    panelTitle: "Acessibilidade",
+    lang: "Idioma",
+    text: "Texto",
+    standard: "Padrão",
+    highContrast: "Alto contraste",
+    reducedMotion: "Sem animação",
+    portal: "Portal de notícias",
+    explore: "Explore",
+    department: "Ver departamento",
+    back: "Voltar ao início",
+    ourWork: "Conheça nosso trabalho",
+    ourStory: "Nossa história",
+    journey: "Nossa jornada",
+    teamField: "Nosso time em campo",
+    teamIntro: "Uma equipe.",
+    specialties: "Múltiplas especialidades.",
+    ourFuture: "Da ideia à realização",
+    impact: "Histórias reais.",
+    impact2: "Impacto de verdade.",
+    about: "Quem somos",
+    aboutTitle: "Mais que uma agência.",
+    aboutSubtitle: "Parceiros de jogo.",
+    manifestation: "O esporte move o mundo.",
+    manifestationSub: "A gente entra em campo para mover o esporte.",
+    exhibition: "Trabalho que fala por si",
+    projects: "Projetos",
+    realized: "realizados.",
+    quote: "Vamos conversar",
+    contactText: "Conte o que você tem em mente. A gente entra em campo junto.",
+    name: "Seu nome",
+    email: "Seu e-mail",
+    phone: "Telefone",
+    message: "Mensagem",
+    send: "Enviar mensagem",
+    place: "Osasco, SP",
+    whatWeDo: "O que fazemos",
+    services: "SERVIÇOS",
+    speak: "Fale com a equipe",
+    time: "Gente que faz",
+    knowTeam: "Conheça o",
+    timeEnd: "time.",
+    movement: "Em movimento",
+    happened: "Por aqui, já aconteceu.",
+    serviceIntro: "SERVIÇOS",
+    noFoundTitle: "Perdemos essa bola",
+    noFoundBody: "Este endereço não existe ou mudou de lugar.",
+    backHome: "Voltar ao início",
+    noPage: "PÁGINA NÃO ENCONTRADA",
+    close: "Fechar",
+    previous: "Foto anterior",
+    next: "Próxima foto",
+    exploreArea: "Explorar área",
+    viewProjects: "Ver projetos",
+    openGallery: "Abrir fotos de",
+    heroBadge: "Marketing esportivo, feito no Brasil",
+    heroText: "Estamos na",
+    heroOutline: "linha de frente",
+    heroSub: "Conectamos atletas, marcas e torcedores com ideias que saem do papel e entram em campo.",
+    projectHighlight: "PROJETO EM DESTAQUE",
+    projectHighlight2: "Projeto em destaque",
+    ourHistory: "Nossa história",
+    ourTime: "Nosso time em campo",
+    speaking: "Vamos conversar",
+    contactButton: "Fale com a gente",
+    people: "Pessoas",
+    now: "Agora",
+    more: "Mais",
+    openMenu: "Abrir menu",
+    portalNews: "Portal de notícias",
+    accessibility: "Acessibilidade",
+    menu: "Menu",
+    appName: "Linha de Frente"
+  },
+  en: {
+    panelTitle: "Accessibility",
+    lang: "Language",
+    text: "Text",
+    standard: "Default",
+    highContrast: "High contrast",
+    reducedMotion: "Reduce motion",
+    portal: "News portal",
+    explore: "Explore",
+    department: "View department",
+    back: "Back to home",
+    ourWork: "Discover our work",
+    ourStory: "Our story",
+    journey: "Our journey",
+    teamField: "Our team on the field",
+    teamIntro: "One team.",
+    specialties: "Multiple specialties.",
+    ourFuture: "From idea to realization",
+    impact: "Real stories.",
+    impact2: "True impact.",
+    about: "Who we are",
+    aboutTitle: "More than an agency.",
+    aboutSubtitle: "Game partners.",
+    manifestation: "Sport moves the world.",
+    manifestationSub: "We step onto the field to move sport.",
+    exhibition: "Work that speaks for itself",
+    projects: "Projects",
+    realized: "completed.",
+    quote: "Let’s talk",
+    contactText: "Tell us about your idea. We’ll move together.",
+    name: "Your name",
+    email: "Your e-mail",
+    phone: "Phone",
+    message: "Message",
+    send: "Send message",
+    place: "Osasco, SP",
+    whatWeDo: "What we do",
+    services: "SERVICES",
+    speak: "Talk to the team",
+    time: "The people behind it",
+    knowTeam: "Meet the",
+    timeEnd: "team.",
+    movement: "In motion",
+    happened: "This is what we’ve done.",
+    serviceIntro: "SERVICES",
+    noFoundTitle: "We missed that one",
+    noFoundBody: "This page doesn’t exist or has moved.",
+    backHome: "Back to home",
+    noPage: "PAGE NOT FOUND",
+    close: "Close",
+    previous: "Previous photo",
+    next: "Next photo",
+    exploreArea: "Explore area",
+    viewProjects: "View projects",
+    openGallery: "Open photos of",
+    heroBadge: "Sports marketing, made in Brazil",
+    heroText: "We are on the",
+    heroOutline: "front line",
+    heroSub: "We connect athletes, brands and fans through ideas that leave the page and hit the field.",
+    projectHighlight: "FEATURED PROJECT",
+    projectHighlight2: "Featured project",
+    ourHistory: "Our story",
+    ourTime: "Our team in action",
+    speaking: "Let’s talk",
+    contactButton: "Get in touch",
+    people: "People",
+    now: "Now",
+    more: "More",
+    openMenu: "Open menu",
+    portalNews: "News portal",
+    accessibility: "Accessibility",
+    menu: "Menu",
+    appName: "Linha de Frente"
+  },
+  es: {
+    panelTitle: "Accesibilidad",
+    lang: "Idioma",
+    text: "Texto",
+    standard: "Estándar",
+    highContrast: "Alto contraste",
+    reducedMotion: "Sin animación",
+    portal: "Portal de noticias",
+    explore: "Explorar",
+    department: "Ver departamento",
+    back: "Volver al inicio",
+    ourWork: "Conoce nuestro trabajo",
+    ourStory: "Nuestra historia",
+    journey: "Nuestro recorrido",
+    teamField: "Nuestro equipo en el campo",
+    teamIntro: "Un equipo.",
+    specialties: "Múltiples especialidades.",
+    ourFuture: "De la idea a la ejecución",
+    impact: "Historias reales.",
+    impact2: "Impacto real.",
+    about: "Quiénes somos",
+    aboutTitle: "Más que una agencia.",
+    aboutSubtitle: "Socios del juego.",
+    manifestation: "El deporte mueve el mundo.",
+    manifestationSub: "Entramos al campo para mover el deporte.",
+    exhibition: "Trabajo que habla por sí solo",
+    projects: "Proyectos",
+    realized: "realizados.",
+    quote: "Hablemos",
+    contactText: "Cuéntanos tu idea. Vamos juntos.",
+    name: "Tu nombre",
+    email: "Tu correo",
+    phone: "Teléfono",
+    message: "Mensaje",
+    send: "Enviar mensaje",
+    place: "Osasco, SP",
+    whatWeDo: "Qué hacemos",
+    services: "SERVICIOS",
+    speak: "Habla con el equipo",
+    time: "Gente que hace",
+    knowTeam: "Conoce al",
+    timeEnd: "equipo.",
+    movement: "En movimiento",
+    happened: "Por aquí ya pasó.",
+    serviceIntro: "SERVICIOS",
+    noFoundTitle: "Perdimos esa pelota",
+    noFoundBody: "Esta dirección no existe o cambió de lugar.",
+    backHome: "Volver al inicio",
+    noPage: "PÁGINA NO ENCONTRADA",
+    close: "Cerrar",
+    previous: "Foto anterior",
+    next: "Siguiente foto",
+    exploreArea: "Explorar área",
+    viewProjects: "Ver proyectos",
+    openGallery: "Abrir fotos de",
+    heroBadge: "Marketing deportivo, hecho en Brasil",
+    heroText: "Estamos en la",
+    heroOutline: "línea de frente",
+    heroSub: "Conectamos atletas, marcas y aficionados con ideas que salen del papel y entran al campo.",
+    projectHighlight: "PROYECTO DESTACADO",
+    projectHighlight2: "Proyecto destacado",
+    ourHistory: "Nuestra historia",
+    ourTime: "Nuestro equipo en acción",
+    speaking: "Hablemos",
+    contactButton: "Contáctanos",
+    people: "Personas",
+    now: "Ahora",
+    more: "Más",
+    openMenu: "Abrir menú",
+    portalNews: "Portal de noticias",
+    accessibility: "Accesibilidad",
+    menu: "Menú",
+    appName: "Línea de Frente"
+  }
+};
+
+const t = (key) => translations[accessibilityState.lang]?.[key] || translations.pt[key] || key;
+
 function applyAccessibilityState() {
   document.documentElement.lang = accessibilityState.lang;
   document.body.classList.toggle("dark-theme", localStorage.getItem("lf-theme") === "dark");
@@ -36,69 +263,90 @@ function applyAccessibilityState() {
   document.body.classList.toggle("font-xlarge", accessibilityState.fontScale >= 1.3);
   document.body.classList.toggle("reduced-motion", accessibilityState.reducedMotion);
 
-  const langButton = document.querySelector("[data-action='language']");
-  if (langButton) {
-    langButton.textContent = accessibilityState.lang.toUpperCase();
-    langButton.setAttribute("aria-label", `Idioma atual: ${accessibilityState.lang.toUpperCase()}`);
+  document.querySelectorAll(".chip[data-action='language']").forEach((button) => {
+    const isSelected = button.dataset.lang === accessibilityState.lang;
+    button.classList.toggle("chip-active", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+  });
+
+  document.querySelectorAll(".chip[data-action='font-scale']").forEach((button) => {
+    const isSelected = Number(button.dataset.value) === accessibilityState.fontScale;
+    button.classList.toggle("chip-active", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+  });
+
+  const contrastButton = document.querySelector("[data-action='contrast']");
+  if (contrastButton) {
+    contrastButton.classList.toggle("chip-active", accessibilityState.contrast);
+    contrastButton.setAttribute("aria-pressed", String(accessibilityState.contrast));
+  }
+
+  const motionButton = document.querySelector("[data-action='reduced-motion']");
+  if (motionButton) {
+    motionButton.classList.toggle("chip-active", accessibilityState.reducedMotion);
+    motionButton.setAttribute("aria-pressed", String(accessibilityState.reducedMotion));
   }
 }
 
 function renderHeader(path) {
   const activeSlug = path.split("/")[1];
+  const portalLabel = t("portal");
   return `<header class="site-header"><nav class="nav-shell" aria-label="Navegação principal">
     <a class="wordmark" href="#/" aria-label="Linha de Frente, início"><img class="wordmark-mark" src="./public/brand-logo.png" alt=""><span>LINHA DE<br>FRENTE<span class="wordmark-dot">.</span></span></a>
     <div class="desktop-nav">${navigation.map(([label, href]) => {
       const slug = href.split("/")[1];
       const department = departments[slug];
-      return `<div class="nav-item ${department ? "has-menu" : ""}"><a class="nav-link ${activeSlug === slug && slug ? "is-active" : ""}" href="#${href}">${escapeHtml(label)}${department ? "<span class='nav-chevron'>⌄</span>" : ""}</a>${department ? `<div class="nav-dropdown"><div class="dropdown-heading"><span>Explore ${escapeHtml(label)}</span>${routeLink(href, "Ver departamento →")}</div><div class="dropdown-services">${department.services.map(([name, serviceSlug]) => routeLink(servicePath(slug, serviceSlug), escapeHtml(name))).join("")}</div></div>` : ""}</div>`;
-    }).join("")}<a class="nav-link portal-link" href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">Portal de notícias <span aria-hidden="true">↗</span></a></div>
+      const translatedLabel = slug ? department?.nav || label : "Início";
+      return `<div class="nav-item ${department ? "has-menu" : ""}"><a class="nav-link ${activeSlug === slug && slug ? "is-active" : ""}" href="#${href}">${escapeHtml(translatedLabel)}${department ? "<span class='nav-chevron'>⌄</span>" : ""}</a>${department ? `<div class="nav-dropdown"><div class="dropdown-heading"><span>${t("explore")} ${escapeHtml(translatedLabel)}</span>${routeLink(href, `${t("department")} →`)}</div><div class="dropdown-services">${department.services.map(([name, serviceSlug]) => routeLink(servicePath(slug, serviceSlug), escapeHtml(name))).join("")}</div></div>` : ""}</div>`;
+    }).join("")}<a class="nav-link portal-link" href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">${portalLabel} <span aria-hidden="true">↗</span></a></div>
     <div class="nav-actions">
       <div class="settings-wrap">
-        <button class="icon-button accessibility-button" data-action="accessibility" aria-label="Abrir painel de acessibilidade" title="Acessibilidade"><span aria-hidden="true">A</span></button>
+        <button class="icon-button accessibility-button" data-action="accessibility" aria-label="${t("accessibility")}" title="${t("accessibility")}"><span aria-hidden="true">A</span></button>
         <div class="settings-panel" hidden>
           <div class="settings-group">
-            <span class="settings-label">Idioma</span>
+            <span class="settings-label">${t("lang")}</span>
             <div class="settings-options language-options">
-              <button class="chip chip-active" type="button" data-action="language" data-lang="pt" aria-pressed="true">PT</button>
-              <button class="chip" type="button" data-action="language" data-lang="en" aria-pressed="false">EN</button>
-              <button class="chip" type="button" data-action="language" data-lang="es" aria-pressed="false">ES</button>
+              <button class="chip ${accessibilityState.lang === "pt" ? "chip-active" : ""}" type="button" data-action="language" data-lang="pt" aria-pressed="${accessibilityState.lang === "pt"}">PT</button>
+              <button class="chip ${accessibilityState.lang === "en" ? "chip-active" : ""}" type="button" data-action="language" data-lang="en" aria-pressed="${accessibilityState.lang === "en"}">EN</button>
+              <button class="chip ${accessibilityState.lang === "es" ? "chip-active" : ""}" type="button" data-action="language" data-lang="es" aria-pressed="${accessibilityState.lang === "es"}">ES</button>
             </div>
           </div>
           <div class="settings-group">
-            <span class="settings-label">Texto</span>
+            <span class="settings-label">${t("text")}</span>
             <div class="settings-options">
-              <button class="chip" type="button" data-action="font-scale" data-value="1">Padrão</button>
-              <button class="chip" type="button" data-action="font-scale" data-value="1.15">A+</button>
-              <button class="chip" type="button" data-action="font-scale" data-value="1.3">A++</button>
+              <button class="chip ${accessibilityState.fontScale === 1 ? "chip-active" : ""}" type="button" data-action="font-scale" data-value="1" aria-pressed="${accessibilityState.fontScale === 1}">${t("standard")}</button>
+              <button class="chip ${accessibilityState.fontScale === 1.15 ? "chip-active" : ""}" type="button" data-action="font-scale" data-value="1.15" aria-pressed="${accessibilityState.fontScale === 1.15}">A+</button>
+              <button class="chip ${accessibilityState.fontScale === 1.3 ? "chip-active" : ""}" type="button" data-action="font-scale" data-value="1.3" aria-pressed="${accessibilityState.fontScale === 1.3}">A++</button>
             </div>
           </div>
           <div class="settings-group settings-inline">
-            <button class="chip chip-toggle" type="button" data-action="contrast" aria-pressed="false">Alto contraste</button>
-            <button class="chip chip-toggle" type="button" data-action="reduced-motion" aria-pressed="false">Sem animação</button>
+            <button class="chip chip-toggle ${accessibilityState.contrast ? "chip-active" : ""}" type="button" data-action="contrast" aria-pressed="${accessibilityState.contrast}">${t("highContrast")}</button>
+            <button class="chip chip-toggle ${accessibilityState.reducedMotion ? "chip-active" : ""}" type="button" data-action="reduced-motion" aria-pressed="${accessibilityState.reducedMotion}">${t("reducedMotion")}</button>
           </div>
         </div>
       </div>
       <button class="icon-button theme-button" data-action="theme" aria-label="Alternar tema" title="Alternar tema"><span class="theme-icon">☼</span></button>
-      <button class="icon-button menu-button" data-action="menu" aria-label="Abrir menu" aria-expanded="false"><span class="menu-glyph">☰</span></button>
+      <button class="icon-button menu-button" data-action="menu" aria-label="${t("openMenu")}" aria-expanded="false"><span class="menu-glyph">☰</span></button>
     </div>
-    <div class="mobile-panel" hidden>${navigation.map(([label, href]) => routeLink(href, escapeHtml(label), "mobile-link")).join("")}<a class="mobile-link portal-link" href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">Portal de notícias ↗</a></div>
+    <div class="mobile-panel" hidden>${navigation.map(([label, href]) => routeLink(href, escapeHtml(label), "mobile-link")).join("")}<a class="mobile-link portal-link" href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">${portalLabel} ↗</a></div>
   </nav></header>`;
 }
 
 function renderFooter() {
-  return `<footer class="site-footer" id="contato"><div class="footer-top"><div><span class="eyebrow">Vamos conversar</span><h2>O próximo projeto<br>começa <span class="accent-text">aqui.</span></h2><p>Conte o que você tem em mente. A gente entra em campo junto.</p></div><form class="contact-form" id="contact-form"><div class="form-row"><label>Seu nome<input name="name" autocomplete="name" required placeholder="Como podemos chamar você?"></label><label>Seu e-mail<input name="email" type="email" autocomplete="email" required placeholder="voce@email.com"></label></div><label>Telefone <span class="optional">(opcional)</span><input name="phone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000"></label><label>Mensagem<textarea name="message" rows="3" required placeholder="Fale um pouco sobre seu projeto"></textarea></label><button class="button button-primary form-submit" type="submit">Enviar mensagem <span>↗</span></button><p class="form-note" aria-live="polite"></p></form></div><div class="footer-bottom"><a class="wordmark" href="#/" aria-label="Linha de Frente, início"><img class="wordmark-mark" src="./public/brand-logo.png" alt=""><span>LINHA DE<br>FRENTE<span class="wordmark-dot">.</span></span></a><div class="footer-meta"><a href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">Portal de notícias ↗</a><a href="https://instagram.com/linhadefrentemkt" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="mailto:linhadefrente.espro@gmail.com">E-mail ↗</a><span>Osasco, SP</span><span>© ${new Date().getFullYear()} Linha de Frente</span></div></div></footer>`;
+  const emailLabel = "E-mail";
+  return `<footer class="site-footer" id="contato"><div class="footer-top"><div><span class="eyebrow">${t("quote")}</span><h2>O próximo projeto<br>começa <span class="accent-text">aqui.</span></h2><p>${t("contactText")}</p></div><form class="contact-form" id="contact-form"><div class="form-row"><label>${t("name")}<input name="name" autocomplete="name" required placeholder="Como podemos chamar você?"></label><label>${t("email")}<input name="email" type="email" autocomplete="email" required placeholder="voce@email.com"></label></div><label>${t("phone")} <span class="optional">(opcional)</span><input name="phone" type="tel" autocomplete="tel" placeholder="(00) 00000-0000"></label><label>${t("message")}<textarea name="message" rows="3" required placeholder="Fale um pouco sobre seu projeto"></textarea></label><button class="button button-primary form-submit" type="submit">${t("send")} <span>↗</span></button><p class="form-note" aria-live="polite"></p></form></div><div class="footer-bottom"><a class="wordmark" href="#/" aria-label="Linha de Frente, início"><img class="wordmark-mark" src="./public/brand-logo.png" alt=""><span>LINHA DE<br>FRENTE<span class="wordmark-dot">.</span></span></a><div class="footer-meta"><a href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">${t("portal")} ↗</a><a href="https://instagram.com/linhadefrentemkt" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="mailto:linhadefrente.espro@gmail.com">${emailLabel} ↗</a><span>${t("place")}</span><span>© ${new Date().getFullYear()} Linha de Frente</span></div></div></footer>`;
 }
 
 function renderHome() {
   const featured = departments.marketing.projects[1];
-  const departmentCards = Object.entries(departments).map(([slug, department], index) => `<a class="department-card reveal" href="#/${slug}"><div class="department-card-top"><span class="department-icon">${department.icon}</span><span class="card-index">0${index + 1}</span></div><h3>${escapeHtml(department.nav)}</h3><p>${escapeHtml(department.description.split(".")[0])}.</p><span class="card-arrow">Explorar área <b>↗</b></span></a>`).join("");
+  const departmentCards = Object.entries(departments).map(([slug, department], index) => `<a class="department-card reveal" href="#/${slug}"><div class="department-card-top"><span class="department-icon">${department.icon}</span><span class="card-index">0${index + 1}</span></div><h3>${escapeHtml(department.nav)}</h3><p>${escapeHtml(department.description.split(".")[0])}.</p><span class="card-arrow">${t("exploreArea")} <b>↗</b></span></a>`).join("");
   return `<main>
-    <section class="hero"><div class="hero-copy"><span class="eyebrow"><i></i> Marketing esportivo, feito no Brasil</span><h1>Estamos na<br><span class="hero-outline">linha de frente</span><br>do esporte<span class="accent-text">.</span></h1><p class="hero-description">Conectamos atletas, marcas e torcedores com ideias que saem do papel e entram em campo.</p><div class="hero-actions">${routeLink("/marketing", "Conheça nosso trabalho <span>↗</span>", "button button-primary")}<a class="text-link" href="#sobre-nos">Nossa história <span>↓</span></a></div><div class="hero-footnote"><span class="live-dot"></span> Criatividade, estratégia e paixão pelo jogo</div></div><div class="hero-visual"><img src="${encodeURI(featured.cover)}" alt="Equipe reunida no evento Janeiro Branco" fetchpriority="high"><div class="hero-image-shade"></div><div class="hero-stamp"><span>LF</span><small>ESPORTE<br>EM MOVIMENTO</small></div><div class="hero-caption"><span>01 / PROJETOS EM CAMPO</span><span>JANEIRO BRANCO · 2026</span></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div></div><div class="hero-index">01 — 05</div></section>
-    <section class="department-section section-pad" id="areas"><div class="section-heading reveal"><div><span class="eyebrow">Nosso time em campo</span><h2>Uma equipe.<br><span class="accent-text">Múltiplas especialidades.</span></h2></div><p>Estratégia, criação e execução no mesmo time. Conheça as áreas que fazem cada projeto acontecer.</p></div><div class="department-grid">${departmentCards}</div></section>
-    <section class="feature-project"><div class="feature-image"><img src="${encodeURI(featured.cover)}" alt="Registro do projeto Janeiro Branco" loading="lazy"><span class="image-label">PROJETO EM DESTAQUE · 2026</span></div><div class="feature-copy"><span class="eyebrow">Da ideia à realização</span><h2>Histórias reais.<br><span class="accent-text">Impacto de verdade.</span></h2><p>Dos bastidores às grandes ideias, cada projeto aproxima pessoas e transforma a energia do esporte em experiências que ficam.</p>${routeLink("/marketing", "Ver projetos <span>↗</span>", "button button-outline")}</div></section>
-    <section class="about-section section-pad" id="sobre-nos"><div class="about-intro reveal"><span class="eyebrow">Quem somos</span><h2>Mais que uma agência.<br><span class="accent-text">Parceiros de jogo.</span></h2><p>Somos uma equipe brasileira que acredita na força do esporte para conectar pessoas, marcas e comunidades. Unimos criatividade, tecnologia e colaboração para fazer cada iniciativa valer.</p><a class="text-link" href="#contato">Vamos conversar <span>↗</span></a></div><div class="about-aside"><div class="about-number">01<span>/</span>05</div><p>Uma estrutura colaborativa, com autonomia para criar e disposição para fazer acontecer.</p><div class="about-rule"></div><div class="values-list"><div><span>01</span><strong>Paixão pelo jogo</strong></div><div><span>02</span><strong>Inovação com propósito</strong></div><div><span>03</span><strong>Excelência em equipe</strong></div></div></div></section>
-    <section class="manifesto"><span class="manifesto-mark">“</span><p>O esporte move o mundo.<br><span>A gente entra em campo para mover o esporte.</span></p><span class="manifesto-signature">LINHA DE FRENTE · OSASCO, SP</span></section>
-    <section class="journey-section section-pad"><div class="section-heading reveal"><div><span class="eyebrow">Nossa jornada</span><h2>Passo a passo.<br><span class="accent-text">Sempre em movimento.</span></h2></div><p>Uma história construída por pessoas, projetos e vontade de fazer diferente.</p></div><ol class="journey-list"><li><span>OUT · 2025</span><strong>Nasce a Linha de Frente</strong><p>Fundação da Linha de Frente Esportiva.</p></li><li><span>NOV · 2025</span><strong>Novas áreas, um só time</strong><p>Estruturação dos departamentos e frentes de trabalho.</p></li><li><span>JAN · 2026</span><strong>Primeiro evento e novo site</strong><p>Um novo espaço para compartilhar o trabalho e a nossa história.</p></li><li><span>AGORA</span><strong>O próximo capítulo é coletivo</strong><p>Mais projetos, mais conexões e novas possibilidades.</p></li></ol></section>
+    <section class="hero"><div class="hero-copy"><span class="eyebrow"><i></i> ${t("heroBadge")}</span><h1>${t("heroText")}<br><span class="hero-outline">${t("heroOutline")}</span><br>do esporte<span class="accent-text">.</span></h1><p class="hero-description">${t("heroSub")}</p><div class="hero-actions">${routeLink("/marketing", `${t("ourWork")} <span>↗</span>`, "button button-primary")}<a class="text-link" href="#sobre-nos">${t("ourStory")} <span>↓</span></a></div><div class="hero-footnote"><span class="live-dot"></span> ${t("people")}</div></div><div class="hero-visual"><img src="${encodeURI(featured.cover)}" alt="Equipe reunida no evento Janeiro Branco" fetchpriority="high"><div class="hero-image-shade"></div><div class="hero-stamp"><span>LF</span><small>ESPORTE<br>EM MOVIMENTO</small></div><div class="hero-caption"><span>01 / ${t("projectHighlight")}</span><span>JANEIRO BRANCO · 2026</span></div><div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div></div><div class="hero-index">01 — 05</div></section>
+    <section class="department-section section-pad" id="areas"><div class="section-heading reveal"><div><span class="eyebrow">${t("teamField")}</span><h2>${t("teamIntro")}<br><span class="accent-text">${t("specialties")}</span></h2></div><p>Estratégia, criação e execução no mesmo time. Conheça as áreas que fazem cada projeto acontecer.</p></div><div class="department-grid">${departmentCards}</div></section>
+    <section class="feature-project"><div class="feature-image"><img src="${encodeURI(featured.cover)}" alt="Registro do projeto Janeiro Branco" loading="lazy"><span class="image-label">${t("projectHighlight")} · 2026</span></div><div class="feature-copy"><span class="eyebrow">${t("ourFuture")}</span><h2>${t("impact")}<br><span class="accent-text">${t("impact2")}</span></h2><p>Dos bastidores às grandes ideias, cada projeto aproxima pessoas e transforma a energia do esporte em experiências que ficam.</p>${routeLink("/marketing", `${t("viewProjects")} <span>↗</span>`, "button button-outline")}</div></section>
+    <section class="about-section section-pad" id="sobre-nos"><div class="about-intro reveal"><span class="eyebrow">${t("about")}</span><h2>${t("aboutTitle")}<br><span class="accent-text">${t("aboutSubtitle")}</span></h2><p>Somos uma equipe brasileira que acredita na força do esporte para conectar pessoas, marcas e comunidades. Unimos criatividade, tecnologia e colaboração para fazer cada iniciativa valer.</p><a class="text-link" href="#contato">${t("speaking")} <span>↗</span></a></div><div class="about-aside"><div class="about-number">01<span>/</span>05</div><p>Uma estrutura colaborativa, com autonomia para criar e disposição para fazer acontecer.</p><div class="about-rule"></div><div class="values-list"><div><span>01</span><strong>Paixão pelo jogo</strong></div><div><span>02</span><strong>Inovação com propósito</strong></div><div><span>03</span><strong>Excelência em equipe</strong></div></div></div></section>
+    <section class="manifesto"><span class="manifesto-mark">“</span><p>${t("manifestation")}<br><span>${t("manifestationSub")}</span></p><span class="manifesto-signature">LINHA DE FRENTE · OSASCO, SP</span></section>
+    <section class="journey-section section-pad"><div class="section-heading reveal"><div><span class="eyebrow">${t("journey")}</span><h2>Passo a passo.<br><span class="accent-text">Sempre em movimento.</span></h2></div><p>Uma história construída por pessoas, projetos e vontade de fazer diferente.</p></div><ol class="journey-list"><li><span>OUT · 2025</span><strong>Nasce a Linha de Frente</strong><p>Fundação da Linha de Frente Esportiva.</p></li><li><span>NOV · 2025</span><strong>Novas áreas, um só time</strong><p>Estruturação dos departamentos e frentes de trabalho.</p></li><li><span>JAN · 2026</span><strong>Primeiro evento e novo site</strong><p>Um novo espaço para compartilhar o trabalho e a nossa história.</p></li><li><span>AGORA</span><strong>O próximo capítulo é coletivo</strong><p>Mais projetos, mais conexões e novas possibilidades.</p></li></ol></section>
   </main>`;
 }
 
@@ -128,7 +376,7 @@ function renderService(slug, serviceSlug) {
 }
 
 function renderNotFound() {
-  return `<main class="inner-page"><section class="not-found"><span class="eyebrow">404 · PÁGINA NÃO ENCONTRADA</span><h1>Perdemos essa bola<span class="accent-text">.</span></h1><p>Este endereço não existe ou mudou de lugar.</p><a class="button button-primary" href="#/">Voltar ao início <span>↗</span></a></section></main>`;
+  return `<main class="inner-page"><section class="not-found"><span class="eyebrow">404 · ${t("noPage")}</span><h1>${t("noFoundTitle")}<span class="accent-text">.</span></h1><p>${t("noFoundBody")}</p><a class="button button-primary" href="#/">${t("backHome")} <span>↗</span></a></section></main>`;
 }
 
 function render() {
@@ -186,8 +434,8 @@ document.addEventListener("click", (event) => {
     return;
   }
 
-  const action = event.target.closest("[data-action]")?.dataset.action;
   const actionTarget = event.target.closest("[data-action]");
+  const action = actionTarget?.dataset.action;
   const panel = document.querySelector(".settings-panel");
 
   if (action === "menu") {
@@ -209,7 +457,7 @@ document.addEventListener("click", (event) => {
   if (action === "language") {
     accessibilityState.lang = actionTarget.dataset.lang;
     localStorage.setItem("lf-lang", accessibilityState.lang);
-    applyAccessibilityState();
+    render();
   }
   if (action === "font-scale") {
     accessibilityState.fontScale = Number(actionTarget.dataset.value);
@@ -220,13 +468,11 @@ document.addEventListener("click", (event) => {
     accessibilityState.contrast = !accessibilityState.contrast;
     localStorage.setItem("lf-contrast", accessibilityState.contrast ? "high" : "normal");
     applyAccessibilityState();
-    actionTarget.setAttribute("aria-pressed", String(accessibilityState.contrast));
   }
   if (action === "reduced-motion") {
     accessibilityState.reducedMotion = !accessibilityState.reducedMotion;
     localStorage.setItem("lf-reduced-motion", accessibilityState.reducedMotion ? "on" : "off");
     applyAccessibilityState();
-    actionTarget.setAttribute("aria-pressed", String(accessibilityState.reducedMotion));
   }
   if (action === "close-gallery" && event.target.matches(".lightbox")) {
     galleryState = null;
@@ -238,6 +484,12 @@ document.addEventListener("click", (event) => {
     galleryState.index = (galleryState.index + offset + galleryState.images.length) % galleryState.images.length;
     render();
   }
+
+  if (!actionTarget && !event.target.closest(".settings-panel")) {
+    const settingsPanel = document.querySelector(".settings-panel");
+    if (settingsPanel && !settingsPanel.hidden) settingsPanel.hidden = true;
+  }
+
   const projectCard = event.target.closest("[data-gallery]");
   if (projectCard) openGallery(Number(projectCard.dataset.gallery));
 });

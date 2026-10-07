@@ -1,0 +1,24 @@
+{
+  "name": "linhadefrente",
+  "version": "1.0.0",
+  "description": "Site institucional da Linha de Frente, feito com HTML, CSS e JavaScript sem framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anabtzz/linhadefrente.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anabtzz/linhadefrente/issues"
+  },
+  "homepage": "https://github.com/anabtzz/linhadefrente#readme",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
