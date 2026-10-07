@@ -21,6 +21,28 @@ const routePath = () => {
 const routeLink = (path, label, className = "") => `<a class="${className}" href="#${path}">${label}</a>`;
 const servicePath = (slug, serviceSlug) => `/${slug}/servicos/${serviceSlug}`;
 
+const accessibilityState = {
+  lang: localStorage.getItem("lf-lang") || "pt",
+  fontScale: Number(localStorage.getItem("lf-font-scale") || 1),
+  contrast: localStorage.getItem("lf-contrast") === "high",
+  reducedMotion: localStorage.getItem("lf-reduced-motion") === "on"
+};
+
+function applyAccessibilityState() {
+  document.documentElement.lang = accessibilityState.lang;
+  document.body.classList.toggle("dark-theme", localStorage.getItem("lf-theme") === "dark");
+  document.body.classList.toggle("high-contrast", accessibilityState.contrast);
+  document.body.classList.toggle("font-large", accessibilityState.fontScale >= 1.15);
+  document.body.classList.toggle("font-xlarge", accessibilityState.fontScale >= 1.3);
+  document.body.classList.toggle("reduced-motion", accessibilityState.reducedMotion);
+
+  const langButton = document.querySelector("[data-action='language']");
+  if (langButton) {
+    langButton.textContent = accessibilityState.lang.toUpperCase();
+    langButton.setAttribute("aria-label", `Idioma atual: ${accessibilityState.lang.toUpperCase()}`);
+  }
+}
+
 function renderHeader(path) {
   const activeSlug = path.split("/")[1];
   return `<header class="site-header"><nav class="nav-shell" aria-label="Navegação principal">
@@ -30,7 +52,35 @@ function renderHeader(path) {
       const department = departments[slug];
       return `<div class="nav-item ${department ? "has-menu" : ""}"><a class="nav-link ${activeSlug === slug && slug ? "is-active" : ""}" href="#${href}">${escapeHtml(label)}${department ? "<span class='nav-chevron'>⌄</span>" : ""}</a>${department ? `<div class="nav-dropdown"><div class="dropdown-heading"><span>Explore ${escapeHtml(label)}</span>${routeLink(href, "Ver departamento →")}</div><div class="dropdown-services">${department.services.map(([name, serviceSlug]) => routeLink(servicePath(slug, serviceSlug), escapeHtml(name))).join("")}</div></div>` : ""}</div>`;
     }).join("")}<a class="nav-link portal-link" href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">Portal de notícias <span aria-hidden="true">↗</span></a></div>
-    <div class="nav-actions"><button class="icon-button theme-button" data-action="theme" aria-label="Alternar tema" title="Alternar tema"><span class="theme-icon">☼</span></button><button class="icon-button menu-button" data-action="menu" aria-label="Abrir menu" aria-expanded="false"><span class="menu-glyph">☰</span></button></div>
+    <div class="nav-actions">
+      <div class="settings-wrap">
+        <button class="icon-button accessibility-button" data-action="accessibility" aria-label="Abrir painel de acessibilidade" title="Acessibilidade"><span aria-hidden="true">A</span></button>
+        <div class="settings-panel" hidden>
+          <div class="settings-group">
+            <span class="settings-label">Idioma</span>
+            <div class="settings-options language-options">
+              <button class="chip chip-active" type="button" data-action="language" data-lang="pt" aria-pressed="true">PT</button>
+              <button class="chip" type="button" data-action="language" data-lang="en" aria-pressed="false">EN</button>
+              <button class="chip" type="button" data-action="language" data-lang="es" aria-pressed="false">ES</button>
+            </div>
+          </div>
+          <div class="settings-group">
+            <span class="settings-label">Texto</span>
+            <div class="settings-options">
+              <button class="chip" type="button" data-action="font-scale" data-value="1">Padrão</button>
+              <button class="chip" type="button" data-action="font-scale" data-value="1.15">A+</button>
+              <button class="chip" type="button" data-action="font-scale" data-value="1.3">A++</button>
+            </div>
+          </div>
+          <div class="settings-group settings-inline">
+            <button class="chip chip-toggle" type="button" data-action="contrast" aria-pressed="false">Alto contraste</button>
+            <button class="chip chip-toggle" type="button" data-action="reduced-motion" aria-pressed="false">Sem animação</button>
+          </div>
+        </div>
+      </div>
+      <button class="icon-button theme-button" data-action="theme" aria-label="Alternar tema" title="Alternar tema"><span class="theme-icon">☼</span></button>
+      <button class="icon-button menu-button" data-action="menu" aria-label="Abrir menu" aria-expanded="false"><span class="menu-glyph">☰</span></button>
+    </div>
     <div class="mobile-panel" hidden>${navigation.map(([label, href]) => routeLink(href, escapeHtml(label), "mobile-link")).join("")}<a class="mobile-link portal-link" href="https://portal-linha-de-frente.onrender.com/" target="_blank" rel="noopener noreferrer">Portal de notícias ↗</a></div>
   </nav></header>`;
 }
@@ -91,7 +141,7 @@ function render() {
   else if (departments[slug] && segments[1] === "servicos" && segments[2]) content = renderService(slug, segments[2]);
   else content = renderNotFound();
   root.innerHTML = `${renderHeader(path)}${content}${renderFooter()}${galleryState ? renderGallery() : ""}`;
-  document.body.classList.toggle("dark-theme", localStorage.getItem("lf-theme") === "dark");
+  applyAccessibilityState();
   document.title = segments.length ? `${departments[slug]?.title || "Página não encontrada"} | Linha de Frente` : "Linha de Frente | Marketing Esportivo";
   observeReveals();
   if (location.hash.includes("#contato")) requestAnimationFrame(() => document.querySelector("#contato")?.scrollIntoView());
@@ -137,11 +187,14 @@ document.addEventListener("click", (event) => {
   }
 
   const action = event.target.closest("[data-action]")?.dataset.action;
+  const actionTarget = event.target.closest("[data-action]");
+  const panel = document.querySelector(".settings-panel");
+
   if (action === "menu") {
-    const panel = document.querySelector(".mobile-panel");
+    const mobilePanel = document.querySelector(".mobile-panel");
     const button = document.querySelector(".menu-button");
-    const isOpen = panel.hidden;
-    panel.hidden = !isOpen;
+    const isOpen = mobilePanel.hidden;
+    mobilePanel.hidden = !isOpen;
     button.setAttribute("aria-expanded", String(isOpen));
     button.querySelector(".menu-glyph").textContent = isOpen ? "×" : "☰";
   }
@@ -149,6 +202,31 @@ document.addEventListener("click", (event) => {
     const dark = !document.body.classList.contains("dark-theme");
     document.body.classList.toggle("dark-theme", dark);
     localStorage.setItem("lf-theme", dark ? "dark" : "light");
+  }
+  if (action === "accessibility") {
+    if (panel) panel.hidden = !panel.hidden;
+  }
+  if (action === "language") {
+    accessibilityState.lang = actionTarget.dataset.lang;
+    localStorage.setItem("lf-lang", accessibilityState.lang);
+    applyAccessibilityState();
+  }
+  if (action === "font-scale") {
+    accessibilityState.fontScale = Number(actionTarget.dataset.value);
+    localStorage.setItem("lf-font-scale", String(accessibilityState.fontScale));
+    applyAccessibilityState();
+  }
+  if (action === "contrast") {
+    accessibilityState.contrast = !accessibilityState.contrast;
+    localStorage.setItem("lf-contrast", accessibilityState.contrast ? "high" : "normal");
+    applyAccessibilityState();
+    actionTarget.setAttribute("aria-pressed", String(accessibilityState.contrast));
+  }
+  if (action === "reduced-motion") {
+    accessibilityState.reducedMotion = !accessibilityState.reducedMotion;
+    localStorage.setItem("lf-reduced-motion", accessibilityState.reducedMotion ? "on" : "off");
+    applyAccessibilityState();
+    actionTarget.setAttribute("aria-pressed", String(accessibilityState.reducedMotion));
   }
   if (action === "close-gallery" && event.target.matches(".lightbox")) {
     galleryState = null;

@@ -21,14 +21,18 @@ window.LFData = {
   ti: {
     title: "Tecnologia da Informação", nav: "T.I", icon: "⌘", subtitle: "Tecnologia que transforma o esporte",
     description: "Desenvolvemos soluções tecnológicas inovadoras que revolucionam a experiência esportiva. De apps a plataformas de análise de dados, criamos o futuro do esporte digital.",
-    services: [["Plataformas de Streaming Esportivo", "streaming"], ["Sistemas de Gestão de Clubes", "gestao-clubes"], ["Analytics e Business Intelligence", "analytics"], ["E-commerce Esportivo", "ecommerce"], ["Integração com Wearables", "wearables"], ["Soluções de Ticketing Digital", "ticketing"], ["Infraestrutura Cloud", "cloud"]],
+    services: [["Plataformas de Streaming Esportivo", "streaming"], ["Plataforma de Notícias", "portal"], ["Manutenção de site e infraestrutura", "manutencao"]],
     projects: [
       { title: "Ambiente de armazenamento", category: "Projeto", description: "Criação das pastas, drives e contas administrativas." },
       { title: "Criação do site", category: "Projeto", description: "Desenvolvimento do site institucional da Linha de Frente." },
-      { title: "Aprimoramento do site", category: "Projeto", description: "Melhorias visuais e funcionais com adaptações para apresentação de resultados." }
+      { title: "Aprimoramento do site", category: "Projeto", description: "Melhorias visuais e funcionais com adaptações para apresentação de resultados." },
+      { title: "Adaptação do site", category: "Projeto", description: "Ajustes visuais e funcionais para melhor experiência do usuário." },
+      { title: "Reestruturação do site", category: "Projeto", description: "Reorganização do conteúdo e melhorias na navegação." },
+      { title: "Criação do portal", category: "Projeto", description: "Desenvolvimento de um portal de notícias e informações esportivas." },
+      { title: "Vinculação do site principal com o portal", category: "Projeto", description: "Integração entre o site institucional e o portal de notícias.", link: "https://portal-linha-de-frente.onrender.com/" }
     ],
-    team: ["Erick|Gestor", "Felipe|Front-end", "Ana Beatriz|Design", "Maycon|Redação"],
-    timeline: [["Novembro 2025", "Criação do departamento"], ["Janeiro 2026", "Criação do site"], ["Fevereiro 2026", "Aprimoramento do site"], ["Abril 2026", "Adaptação do site"]]
+    team: ["Erick|Full-stack", "Felipe|Coordenador", "Ana Beatriz|Gestora", "Maycon|Redação", "Caio|Tester"],
+    timeline: [["Novembro 2025", "Criação do departamento"], ["Janeiro 2026", "Criação do site"], ["Fevereiro 2026", "Aprimoramento do site"], ["Abril 2026", "Adaptação do site"], ["Agosto 2026", "Reestruturação"], ["Setembro 2026", "Criação do portal"], ["Outubro 2026", "Vinculação do site principal com o portal"]]
   },
   eventos: {
     title: "Eventos", nav: "Eventos", icon: "◷", subtitle: "Experiências que marcam história",
